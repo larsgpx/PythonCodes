@@ -5,7 +5,6 @@ import os, commands, re, subprocess
 
 #Primero que nada, hacer un backup del fstab antes de proceder con todo.
 
-#backNfs = os.system('yes |cp -i /etc/fstab /etc/fstab-backup')
 
 nfsDir01 = commands.getoutput('mount 10.0.100.2:/backup01 /backup/')
 nfsInternoDir02 = commands.getoutput('mount 10.0.100.2:/nfs02 /Interbackup/')
@@ -40,8 +39,6 @@ class Troubleshooting:
         print mensaje
 
 tester = Troubleshooting()
-
-#tester.test_print('este mensaje')
 
 
 #Se requieren los hostname de los servidores consolidados para proceder
